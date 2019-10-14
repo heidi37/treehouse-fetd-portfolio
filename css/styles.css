@@ -4,7 +4,7 @@ body {
 
 h2 {
     text-align: center;
-    color: white;
+    color: 605c4e;
     margin-top: 15px;
 }
 
@@ -21,9 +21,16 @@ h2 {
     color: #a49966;
 }
 
+.card-deck {
+    justify-content: space-around;
+}
+
+.card-body {
+    background-color: #a49966;
+}
+
 #hello, #codeblock{
     background-color: #605c4e;
-    
 }
 
 #hello {
@@ -55,12 +62,34 @@ h2 {
     margin-top: 15px;
 }
 
+#work,
+#about {
+    max-width: 1100px;
+    padding: 20px 50px;
+    margin: 0 auto;
+}
+
+#work {
+    background-color: #F4EDDB;
+}
+
+#about {
+    background-color: #605c4e;
+    color: #a49966;
+}
+
+#second-row {
+    display: none;
+}
+
+#less-work {
+    display: none;
+}
+
+
 @media (min-width: 1000px) {
     #codeblock{
         padding-left: 60px;
-    }
-    #reach-out {
-        /* margin-top: 60px; */
     }
     #photo-credit{
         margin-top: 101px;
