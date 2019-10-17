@@ -1,5 +1,6 @@
 body {
   background-color: #c7c7a6;
+
 }
 
 h2 {
@@ -73,6 +74,12 @@ h2 {
     background-size: cover;
     background-repeat: no-repeat;
     height: 460px;
+    transition: background-image 1s;
+}
+
+#hello:hover {
+    background-image: url('../images/marat-gilyadzinov-69BTCuFDuDA-unsplash-2.jpg');
+    /* transform: scale(1.2) */
 }
 
 #codeblock{
@@ -124,6 +131,7 @@ h2 {
 #contact {
     color: #ffffff;
     background-color: #343A40;
+    text-align: center;
 }
 
 @media (max-width:576px) {
@@ -139,9 +147,13 @@ h2 {
     }
     #hello {
         background-position: 0px -80px;
+        height: 600px;
     }
     #lead-text {
         margin-top: 40px;
         font-size: 1.2em;
+    }
+    #work {
+        padding-top: 200px;
     }
 }
