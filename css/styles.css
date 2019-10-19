@@ -1,17 +1,21 @@
-body {
-  background-color: #c7c7a6;
-
+html, body {
+    overflow-x: hidden;
 }
 
 h2 {
     text-align: center;
-    color: #A2A4A7;
+    color: #ffffff;
     margin-top: 15px;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
 }
 
+
 #work h2 {
-    margin-bottom: 50px;
+    margin-bottom: 100px;
+}
+
+#about p {
+    font-size: 1.3em;
 }
 
 .navbar {
@@ -19,8 +23,8 @@ h2 {
 }
 
 .row {
-    /* max-width: 1100px;
-    margin: 0 auto; */
+    
+    margin: 0 auto;
     margin-top: 55px;
 }
 
@@ -32,8 +36,13 @@ h2 {
     color: #a49966;
 }
 
+.card {
+    margin: auto;
+}
+
 .card-deck {
     justify-content: space-around;
+    padding: 40px;
 }
 
 .card-body {
@@ -65,6 +74,26 @@ h2 {
     margin-top: 20px;
 }
 
+.icons svg {
+    stroke: #A2A4A7;
+    min-width: 50px;
+    transition-duration: 500ms;
+}
+
+.icons svg:hover {
+    stroke: #d6bb44;
+    transform: scale(1.2);
+}
+
+.icons svg g {
+    fill: #A2A4A7;
+    transition-duration: 500ms;
+}
+
+.icons svg g:hover {
+    fill: #d6bb44;
+}
+
 #hello, #codeblock{
     background-color: #010101;
 }
@@ -83,9 +112,11 @@ h2 {
 }
 
 #codeblock{
-    padding-left: 30px;
     color: #d6bb44;
     font-family: 'Courier New', Courier, monospace;
+    margin-top: 0px;
+    padding-left: 40px;
+    padding-bottom: 60px;
 }
 
 #reach-out{
@@ -103,7 +134,7 @@ h2 {
 #about,
 #contact {
     /* max-width: 1100px; */
-    padding: 50px 50px;
+    padding: 50px 0;
     /* margin: 0 auto; */
 }
 
@@ -130,19 +161,40 @@ h2 {
 }
 #contact {
     color: #ffffff;
-    background-color: #343A40;
+    background-color: #010101;
     text-align: center;
 }
 
-@media (max-width:576px) {
+#footer {
+    background-color: #343B40;
+    height: 55px;
+    text-align: right;
+    color: #ffffff;
+    padding: 15px 15px 0;
+}
+
+
+@media (min-width: 576px){
+    #work {
+        padding-top: 60px;
+    }
+}
+
+@media (min-width:768px) {
+    .icons svg {
+        max-width: 75px;
+    }
     #codeblock{
-        margin-top: 0px;
+        padding-left: 60px;
+        padding-top: 50px;
+        font-size: 1.1em;
     }
 }
 
 @media (min-width: 1400px) {
     #codeblock{
         padding-left: 120px;
+        padding-top: 100px;
         font-size: 1.3em;
     }
     #hello {
@@ -151,9 +203,12 @@ h2 {
     }
     #lead-text {
         margin-top: 40px;
-        font-size: 1.2em;
+        font-size: 1.5em;
     }
-    #work {
-        padding-top: 200px;
+    #work, #about {
+        padding-top: 105px;
+    }
+    #heidi {
+        margin-left: 100px;
     }
 }
