@@ -76,7 +76,7 @@ h2 {
 
 .icons svg {
     stroke: #A2A4A7;
-    min-width: 50px;
+    max-width: 50px;
     transition-duration: 500ms;
 }
 
