@@ -5,21 +5,19 @@ html, body {
 h2 {
     text-align: center;
     color: #ffffff;
-    margin-top: 15px;
+    margin-top: 25px;
     margin-bottom: 60px;
+    font-size: 2.5em;
+    font-weight: 300;
 }
 
-
-#work h2 {
-    margin-bottom: 100px;
-}
-
-#about p {
-    font-size: 1.3em;
-}
+/*-----CLASS SELECTORS-----*/
 
 .navbar {
     margin-bottom: 100px;
+}
+.navbar-brand {
+    font-size: 2em;
 }
 
 .row {
@@ -75,24 +73,21 @@ h2 {
 }
 
 .icons svg {
-    stroke: #A2A4A7;
-    max-width: 50px;
+    stroke: #d6bb44;
+    width: 30px;
     transition-duration: 500ms;
+    margin: 0px 10px;
 }
 
 .icons svg:hover {
-    stroke: #d6bb44;
-    transform: scale(1.2);
+    transform: scale(1.2) rotate(20deg);
 }
 
 .icons svg g {
-    fill: #A2A4A7;
-    transition-duration: 500ms;
-}
-
-.icons svg g:hover {
     fill: #d6bb44;
 }
+
+/*-----ID SELECTORS-----*/
 
 #hello, #codeblock{
     background-color: #010101;
@@ -108,7 +103,6 @@ h2 {
 
 #hello:hover {
     background-image: url('../images/marat-gilyadzinov-69BTCuFDuDA-unsplash-2.jpg');
-    /* transform: scale(1.2) */
 }
 
 #codeblock{
@@ -126,21 +120,31 @@ h2 {
 }
 #lead-text {
     text-align: center;
-    /* display: none; */
     margin-top: 15px;
 }
 
 #work,
 #about,
 #contact {
-    /* max-width: 1100px; */
     padding: 50px 0;
-    /* margin: 0 auto; */
 }
 
 #work {
     background-color: #010101;
     color: #ffffff;
+}
+
+#more-work,
+#less-work {
+    padding-left: 100px;
+}
+
+#work h2 {
+    margin-bottom: 100px;
+}
+
+#about p {
+    font-size: 1.3em;
 }
 
 #about {
@@ -174,6 +178,8 @@ h2 {
 }
 
 
+/*-----MEDIA QUERIES-----*/
+
 @media (min-width: 576px){
     #work {
         padding-top: 60px;
@@ -189,6 +195,13 @@ h2 {
         padding-top: 50px;
         font-size: 1.1em;
     }
+    #lead-text {
+        margin-top: 10px;
+        font-size: 1.2em;
+    }
+    #reach-out{
+        margin-top: 60px;
+    }
 }
 
 @media (min-width: 1400px) {
@@ -201,8 +214,11 @@ h2 {
         background-position: 0px -80px;
         height: 600px;
     }
+    #reach-out{
+        margin-top: 60px;
+    }
     #lead-text {
-        margin-top: 40px;
+        margin-top: 20px;
         font-size: 1.5em;
     }
     #work, #about {

@@ -8,68 +8,96 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body id="home">
+<body id="home" data-spy="scroll" data-target=".navbar" data-offset="100">
     
     <!---TOP FIXED NAV-->
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-            <a class="navbar-brand" href="#">Heidi Fryzell ( )</a>
+        <a class="navbar-brand" href="#">Heidi Fryzell ( &nbsp; )</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
-                <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
-                    <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">{Home} <span class="sr-only">(current)</span></a>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
+                <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">{ Home } <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#work">{ Work }</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="#about">{ About }</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#work">{Work}</a>
-                    </li>
-                    <li class="nav-item">
-                            <a class="nav-link" href="#about">{About}</a>
-                        </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact" tabindex="-1">{Contact}</a>
-                    </li>
-                    </ul>
-                </div>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact" tabindex="-1">{ Contact }</a>
+                </li>
+                </ul>
+            </div>
     </nav>
 
+    <!--MODAL-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Tell Me Your Story</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                        <label for="exampleFormControlInput1">Email address</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                        </div>
+                        <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Tell me about your project</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-warning" data-dismiss="modal">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <!---INTRO DIVS-->
+    <!--INTRO DIVS-->
             
     <div class="row">
         <div class="col-12 col-sm-6 col-lg-7 col-xl-8" id="hello">
-
-                <button type="button" id="reach-out" class="btn btn-secondary btn-lg">Reach Out!</button>
-                <p id="lead-text">
-                    I am excited to hear about your development needs.
-                </p>
+            <button type="button" id="reach-out" class="btn btn-secondary btn-lg" data-toggle="modal" data-target="#exampleModal">Reach Out!</button>
+            <p id="lead-text">
+                I am excited to hear about your development needs.
+            </p>
         </div>
         <div class="col-12 col-sm-6 col-lg-5 col-xl-4" id="codeblock">
             <div class="text-wrapper">
                 <p>
-                        <br><span class="yellow-text">var</span> webDeveloper = {
-                        <br>&nbsp;&nbsp;firstName : <span class="white-text">"Heidi"</span>,
-                        <br>&nbsp;&nbsp;lastName : <span class="white-text">"Fryzell"</span>,
-                        <br>&nbsp;&nbsp;skills : {
-                            <br>&nbsp;&nbsp;&nbsp;&nbsp;html : <span class="yellow-text">true</span>,
-                            <br>&nbsp;&nbsp;&nbsp;&nbsp;css : <span class="yellow-text">true</span>,
-                            <br>&nbsp;&nbsp;&nbsp;&nbsp;javaScript : <span class="yellow-text">true</span>
-                            <br>&nbsp;&nbsp;&nbsp;&nbsp;}
+                    <br><span class="yellow-text">var</span> webDeveloper = {
+                    <br>&nbsp;&nbsp;firstName : <span class="white-text">"Heidi"</span>,
+                    <br>&nbsp;&nbsp;lastName : <span class="white-text">"Fryzell"</span>,
+                    <br>&nbsp;&nbsp;skills : {
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;html : <span class="yellow-text">true</span>,
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;css : <span class="yellow-text">true</span>,
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;javaScript : <span class="yellow-text">true</span>
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;}
                     <br>};
                 </p>
             </div>
         </div>
     </div>
     
-        <!-- PHOTO CREDIT: https://unsplash.com/@m3design?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge
-        Marat Gilyadzinov -->
-    <!---WORK GALLERY-->
+    <!-- PHOTO CREDIT: https://unsplash.com/@m3design?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge
+    Marat Gilyadzinov -->
+    
+     <!--WORK GALLERY-->
     
     <div id="work">
-        <h2 class="display-4">{Work}</h2>
+        <h2>{ Work }</h2>
         <div class="card-deck">
             <div class="card text-white bg-secondary mb-3" style="min-width: 20rem; max-width: 30rem;">
                 <img src="images/word_press_site.jpg" class="card-img-top" alt="WordPress personal site">
@@ -97,99 +125,94 @@
             </div>
         </div>
         <div class="card-deck mt-4" id="second-row">
-                <div class="card text-white bg-secondary mb-3" style="min-width: 20rem; max-width: 30rem;">
-                    <img src="images/origami_flexbox.jpg" class="card-img-top" alt="WordPress personal site">
-                    <div class="card-body">
-                        <h5 class="card-title">Flexbox</h5>
-                        <p class="card-text">Site using flexbox and featuring my very own origami.</p>
-                        <a href="https://www.heidifryzell.com/origami/" class="btn btn-secondary" target="_blank">View Project</a>
-                    </div>
-                </div>
-                <div class="card text-white bg-secondary mb-3" style="min-width: 20rem; max-width: 30rem;">
-                    <img src="images/employee_directory.jpg" class="card-img-top" alt="Employee directory site">
-                    <div class="card-body">
-                        <h5 class="card-title">fetch + API + javaScript</h5>
-                        <p class="card-text">This directory is generated using fetch to call an API.</p>
-                        <a href="https://www.heidifryzell.com/front-end-tech-degree/fetd-project-8/" class="btn btn-secondary" target="_blank">View Project</a>
-                    </div>
-                </div>
-                <div class="card text-white bg-secondary mb-3" style="min-width: 20rem; max-width: 30rem;">
-                    <img src="images/photo_gallery.jpg" class="card-img-top" alt="jquery plugin photo lightbox gallery">
-                    <div class="card-body">
-                        <h5 class="card-title">jQuery</h5>
-                        <p class="card-text">This photo gallery was built with a jQuery plugin.</p>
-                        <a href="https://www.heidifryzell.com/front-end-tech-degree/fetd-project-5/" class="btn btn-secondary" target="_blank">View Project</a>
-                    </div>
+            <div class="card text-white bg-secondary mb-3" style="min-width: 20rem; max-width: 30rem;">
+                <img src="images/origami_flexbox.jpg" class="card-img-top" alt="WordPress personal site">
+                <div class="card-body">
+                    <h5 class="card-title">Flexbox</h5>
+                    <p class="card-text">Site using flexbox and featuring my very own origami.</p>
+                    <a href="https://www.heidifryzell.com/origami/" class="btn btn-secondary" target="_blank">View Project</a>
                 </div>
             </div>
+            <div class="card text-white bg-secondary mb-3" style="min-width: 20rem; max-width: 30rem;">
+                <img src="images/employee_directory.jpg" class="card-img-top" alt="Employee directory site">
+                <div class="card-body">
+                    <h5 class="card-title">fetch + API + javaScript</h5>
+                    <p class="card-text">This directory is generated using fetch to call an API.</p>
+                    <a href="https://www.heidifryzell.com/front-end-tech-degree/fetd-project-8/" class="btn btn-secondary" target="_blank">View Project</a>
+                </div>
+            </div>
+            <div class="card text-white bg-secondary mb-3" style="min-width: 20rem; max-width: 30rem;">
+                <img src="images/photo_gallery.jpg" class="card-img-top" alt="jquery plugin photo lightbox gallery">
+                <div class="card-body">
+                    <h5 class="card-title">jQuery</h5>
+                    <p class="card-text">This photo gallery was built with a jQuery plugin.</p>
+                    <a href="https://www.heidifryzell.com/front-end-tech-degree/fetd-project-5/" class="btn btn-secondary" target="_blank">View Project</a>
+                </div>
+            </div>
+        </div>
             <button type="button" id="more-work" class="btn btn-lg btn-work">See More Work...</button>
             <button type="button" id="less-work" class="btn btn-lg btn-work">See Less Work...</button>
-        </div>
-    <!---ABOUT-->
+    </div>
+    <!--ABOUT-->
     <div id="about">
-        <h2 class="display-4">{About}</h2>
+        <h2>{ About }</h2>
         <div class="row">
             <div class="col-12 col-md-6 col-lg-4">
                 <img src="images/heidi_coffee.png" id="heidi" alt="Heidi drinking a coffee">
             </div>
-            <div class="col-12 col-md-6 col-lg-8">
+            <div class="col-12 col-md-6 col-lg-6">
                 <p>Hi! Yeah that's me waiting for you to talk to me about your web development needs.</p>
-                <p>I have worked on and managed web sites for over 20 years.</p>
-                <p>I am about to complete the Team TreeHouse Frontend Web Development tech degree.</p>
-                <p>I look forward to making your dreams for your web site come true. </p>
+                <p>I have worked on and managed web sites for over 20 years. I have worked in education and e-commerce. I know my way around a CMS but I prefer to get down into the code where the magic happens.</p>
+                <p>I am about to complete the Team TreeHouse Frontend Web Development tech degree. I have been brushing up on the latest with HTML, CSS, jQuery, and Bootsrap. I also have acquired a solid foundation in javaScript. </p>
+                <p>I look forward to making your dreams for your web site come true.</p>
+                <p>
+                    <img src="images/heidi.png" alt="heidi signature" width="100">
+                </p>
             </div>
         </div>
     </div>
 
-    <!---CONTACT--->
+    <!--CONTACT-->
     <div id="contact">
-        <h2 class="display-4">{Contact}</h2>
+        <h2>{ Contact }</h2>
         <div class="row">
-            <div class="col-6 col-sm-3 p-5 icons">
-                <a href="mailto: heidi5659@gmail.com" target="_blank">
+            <div class="col icons text-xs-center">
+                <a href="mailto:heidi5659@gmail.com" target="_blank">
                     <svg viewBox="0 0 20 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                         <!-- Generator: Sketch 3.8.1 (29687) - http://www.bohemiancoding.com/sketch -->
                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                            <g transform="translate(-300.000000, -922.000000)" fill="#ffffff">
-                                <g transform="translate(56.000000, 160.000000)">
-                                    <path d="M262,764.291 L254,771.318 L246,764.281 L246,764 L262,764 L262,764.291 Z M246,775 L246,766.945 L254,773.98 L262,766.953 L262,775 L246,775 Z M244,777 L264,777 L264,762 L244,762 L244,777 Z" id="email-[#1573]"></path>
-                                </g>
-                            </g>
+                        <g transform="translate(-300.000000, -922.000000)" fill="#ffffff">
+                        <g transform="translate(56.000000, 160.000000)">
+                        <path d="M262,764.291 L254,771.318 L246,764.281 L246,764 L262,764 L262,764.291 Z M246,775 L246,766.945 L254,773.98 L262,766.953 L262,775 L246,775 Z M244,777 L264,777 L264,762 L244,762 L244,777 Z"></path>
                         </g>
-                    </svg>
-                </a>
-            </div>
+                        </g>
+                        </g>
+                    </svg></a>
 
-            <div class="col-6 col-sm-3 p-5 icons" id="github">
-                    <a href="https://github.com/heidi37" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg"   viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                            </path>
-                        </svg>
-                    </a>
-            </div>
-
-            <div class="col-6 col-sm-3 p-5 icons" id="linkedin">
+            
+                <a href="https://github.com/heidi37" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg"   viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                        </path>
+                    </svg></a>
+        
                 <a href="https://www.linkedin.com/in/heidifryzell/" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg"   viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin">
                         <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                         <rect x="2" y="9" width="4" height="12"></rect>
                         <circle cx="4" cy="4" r="2"></circle>
-                    </svg>
-                </a>
-            </div>
-
-            <div class="col-6 col-sm-3 p-5 icons" id="twitter">
+                    </svg></a>
+    
                 <a href="https://twitter.com/HeidiFryz" target="_blank">
                 <svg xmlns="http://www.w3.org/2000/svg"   viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter">
                     <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
                 </path>
-                </svg>
+                </svg></a>
+                
             </div>
-
         </div>
     </div>
-    <!---MICRO FOOTER-->
+    <!--MICRO FOOTER-->
     <div id="footer">
         <small>&copy;2019 - Heidi Fryzell</small>
     </div>
